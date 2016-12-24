@@ -1,3 +1,40 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="ui-g">
+  <div class="ui-md-3"></div>
+  <div class="ui-md-6">
+    <h1>
+      {{title}}
+    </h1>
+    <h1> Button </h1>
+    <button pButton type="button" label="Click"></button>
+
+    <h1> Grilla </h1>
+    <nav class="ui-g">
+        <div class="ui-md-1 height100 rojo"></div>
+        <a class="ui-md-2 height100 verde" ></a>
+        <a class="ui-md-3 height100 azul" ></a>
+        <a class="ui-md-1 height100 violeta" ></a>
+        <a class="ui-md-2 height100 amarillo" ></a>
+        <div class="ui-md-1 height100 rojo"></div>
+    </nav>
+
+    <h1> Password </h1>
+    <input type="text" pPassword />
+  
+    <h1> tabla estatica </h1>
+    <p-dataTable 
+            [globalFilter]="gb" #dt
+            [value]="completeTable" 
+            [rows]="10" [paginator]="true" 
+            [pageLinks]="3" 
+            [rowsPerPageOptions]="[5,10,20]"
+            [responsive]="true" 
+            [stacked]="stacked">
+            <header>Lista de personas</header>
+        <p-column field="id" header="id"></p-column>
+        <p-column field="first_name" header="first_name (arranca con)" [filter]="true" filterPlaceholder="Search"></p-column>
+        <p-column field="last_name" header="last_name"></p-column>
+        <p-column field="medium" header="medium"></p-column>
+        <p-column field="twitter" header="twitter"></p-column>
+    </p-dataTable>
+    </div>
+  <div class="ui-md-3"></div>

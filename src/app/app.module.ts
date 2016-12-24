@@ -5,6 +5,10 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+//imports primeng
+import {ButtonModule, PasswordModule, DataTableModule ,SharedModule} from 'primeng/primeng';
+
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +16,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ButtonModule,
+    PasswordModule,
+    DataTableModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
